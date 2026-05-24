@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rakhi 💖</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- MUSIC -->
+
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mp3">
+</audio>
+
+<!-- LOADER -->
+
+<div id="loader">
+
+<div class="loader-stars"></div>
+
+<div class="loader-content">
+
+<h1 class="loader-title">
+Loading Surprise 🎀
+</h1>
+
+<div class="loader-heart">
+💖
+</div>
+
+<p class="loader-text">
+Preparing Something Magical...
+</p>
+
+</div>
+
+</div>
+
+<!-- PARTICLES -->
+
+<div class="particles"></div>
+<div class="hearts"></div>
+<div class="stars"></div>
+<div class="petals"></div>
+<div class="glow-orbs"></div>
+
+<!-- INTRO PAGE -->
+
+<section class="page active" id="introPage">
+
+<div class="intro-overlay"></div>
+
+<div class="intro-card">
+
+<h1 class="main-title">
+Rakhi 💖
+</h1>
+
+<p class="subtitle">
+A Cinematic Birthday Surprise For My Choti Behan ✨
+</p>
+
+<button class="main-btn" onclick="startExperience()">
+Enter Magic 🎀
+</button>
+
+</div>
+
+</section>
+
+<!-- COUNTDOWN PAGE -->
+
+<section class="page" id="countdownPage">
+
+<div class="glass-card countdown-card">
+
+<h2 class="section-title">
+Birthday Countdown ⏳
+</h2>
+
+<div class="countdown-glow"></div>
+
+<div id="countdown">
+
+<div class="time-box">
+<span id="days">00</span>
+<p>Days</p>
+</div>
+
+<div class="time-box">
+<span id="hours">00</span>
+<p>Hours</p>
+</div>
+
+<div class="time-box">
+<span id="minutes">00</span>
+<p>Minutes</p>
+</div>
+
+<div class="time-box">
+<span id="seconds">00</span>
+<p>Seconds</p>
+</div>
+
+</div>
+
+<p class="small-text">
+Every second brings us closer to your special day 💖
+</p>
+
+<button class="main-btn" onclick="openGallery()">
+Open Memories 📸
+</button>
+
+</div>
+
+</section>
+
+<!-- GALLERY PAGE -->
+
+<section class="page" id="galleryPage">
+
+<h1 class="gallery-title">
+Beautiful Memories 💕
+</h1>
+
+<div class="gallery-wrapper">
+
+<div class="slider-container">
+
+<img src="image1.jpg" class="slide activeSlide">
+<img src="image2.jpg" class="slide">
+<img src="image3.jpg" class="slide">
+
+</div>
+
+<div class="slider-shadow"></div>
+
+<div class="slider-controls">
+
+<button onclick="prevSlide()">⬅</button>
+<button onclick="nextSlide()">➡</button>
+
+</div>
+
+<div class="dots">
+
+<span class="dot activeDot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+
+</div>
+
+</div>
+
+<button class="main-btn" onclick="openLetter()">
+Secret Letter 💌
+</button>
+
+</section>
+
+<!-- LETTER PAGE -->
+
+<section class="page" id="letterPage">
+
+<div class="glass-card letter-card">
+
+<div class="envelope-container">
+
+<div class="envelope" onclick="showLetter()">
+💌
+</div>
+
+<div class="envelope-glow"></div>
+
+</div>
+
+<p class="tap-text">
+Tap Envelope To Open ✨
+</p>
+
+<div id="letterContent" class="hidden">
+
+<h2 class="letter-title">
+To My Cute Sister 💖
+</h2>
+
+<div class="typing-box">
+
+<p id="typingText"></p>
+
+</div>
+
+<button class="main-btn" onclick="openGift()">
+Open Gift 🎁
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GIFT PAGE -->
+
+<section class="page" id="giftPage">
+
+<div class="gift-background"></div>
+
+<div class="glass-card gift-card">
+
+<h1 class="gift-title">
+Special Gift For Rakhi 🎁
+</h1>
+
+<div class="gift-box-container">
+
+<div class="gift-box" onclick="showGiftMessage()">
+
+<div class="gift-lid"></div>
+
+<div class="gift-body">
+🎁
+</div>
+
+</div>
+
+<div class="gift-glow"></div>
+
+</div>
+
+<p class="tap-text">
+Tap Gift To Open 💝
+</p>
+
+<div id="giftMessage" class="hidden">
+
+<div class="gift-message-card">
+
+<h2>
+You Are The Cutest Blessing Of My Life 😭💖
+</h2>
+
+<p class="gift-text">
+No matter how much you grow,
+you will always remain my sweetest little sister 💕
+</p>
+
+<button class="main-btn" onclick="openBirthdayPage()">
+Final Surprise 🎂
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BIRTHDAY PAGE -->
+
+<section class="page" id="birthdayPage">
+
+<div class="birthday-background"></div>
+
+<!-- LOCKED SCREEN -->
+
+<div id="lockedScreen" class="glass-card locked-card">
+
+<div class="lock-icon">
+🔒
+</div>
+
+<h1>
+Birthday Surprise Locked
+</h1>
+
+<p>
+Wait Until 29 September 2026 🎀
+</p>
+
+<div class="lock-glow"></div>
+
+</div>
+
+<!-- UNLOCKED CONTENT -->
+
+<div id="birthdayContent" class="hidden">
+
+<!-- FIREWORKS -->
+
+<canvas id="fireworksCanvas"></canvas>
+
+<!-- FLOATING BALLOONS -->
+
+<div class="balloons-container">
+
+<div class="balloon">🎈</div>
+<div class="balloon">🎈</div>
+<div class="balloon">🎈</div>
+<div class="balloon">🎈</div>
+
+</div>
+
+<!-- TITLE -->
+
+<h1 class="birthday-title">
+Happy Birthday Rakhi 🎂💖
+</h1>
+
+<p class="birthday-subtitle">
+Today Is All About You Princess ✨
+</p>
+
+<!-- CAKE SECTION -->
+
+<div class="cake-section">
+
+<div class="cake-glow"></div>
+
+<div id="candle">
+🕯️
+</div>
+
+<div id="cake" onclick="cutCake()">
+🎂
+</div>
+
+<div class="cake-shadow"></div>
+
+</div>
+
+<!-- CONTROLS -->
+
+<div class="birthday-buttons">
+
+<button class="main-btn" onclick="blowCandle()">
+Blow Candle ✨
+</button>
+
+<button class="main-btn" onclick="launchConfetti()">
+Celebrate 🎉
+</button>
+
+</div>
+
+<!-- WISH BOX -->
+
+<div class="wish-box">
+
+<div class="wish-glow"></div>
+
+<h2 class="wish-title">
+Special Message 💌
+</h2>
+
+<p class="wish-message">
+
+Happy Birthday, Rakhi! 🎉
+You are the sweetest little sister and a very special part of my life.
+Your smile brings happiness to everyone around you.
+I am lucky to have a caring, kind, and loving sister like you.
+May your birthday be filled with joy, laughter, and beautiful memories.
+Always stay happy, confident, and strong.
+Keep shining and achieving your dreams.
+No matter what happens,
+I will always support and protect you.
+Have an amazing birthday, little sister! ❤️
+
+</p>
+
+</div>
+
+<!-- FINAL TEXT -->
+
+<div class="ending-text">
+
+Your Brother Will Always Support You And Protect You 🫶
+
+</div>
+
+<!-- CREDITS -->
+
+<div class="credits">
+
+Made With Love By Vivek 💖
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TOUCH EFFECT -->
+
+<div id="touchHearts"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
